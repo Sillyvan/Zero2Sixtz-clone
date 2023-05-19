@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+body {
+  background-color: #313338;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button-inv {
+  font-size: 20px;
+  border: 1px solid #60b0f4;
+  border-radius: 100px;
+  background-color: #60b0f4;
+  text-decoration: none;
+  padding: 15px 30px;
+  margin: 0 5px;
+}
+.button-add-bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  background: #60b0f4;
+  color: #fff;
+}
+
+.button-discord {
+  font-size: 20px;
+  border: 1px solid #e2e2e2;
+  border-radius: 100px;
+  background-color: #e2e2e2;
+  text-decoration: none;
+  padding: 15px 30px;
+  margin: 0 5px;
+  color: black;
+}
+
+.button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #60b0f4;
+  height: 200px;
+  text-align: center;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-grow: 1;
+  flex-basis: 30%;
+}
+
+.command-card {
+  flex-grow: 1;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  border: 5px solid transparent;
+  background: #1e1f22;
+}
+
+.navbar {
+  background-color: #1e1f22;
+  height: 80px;
+  font-size: 16px;
+  position: sticky;
+  z-index: 10;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .navicon {
+    width: 1.125em;
+    height: 0.125em;
+  }
+
+  .navicon::before,
+  .navicon::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-out;
+    content: '';
+    background: #3d4852;
+  }
+
+  .navicon::before {
+    top: 5px;
+  }
+
+  .navicon::after {
+    top: -5px;
+  }
+
+  .menu-btn:not(:checked) ~ .menu {
+    display: none;
+  }
+
+  .menu-btn:checked ~ .menu {
+    display: block;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon::before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon::after {
+    transform: rotate(45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon::before,
+  .menu-btn:checked ~ .menu-icon .navicon::after {
+    top: 0;
+  }
+}
